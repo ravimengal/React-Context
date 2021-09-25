@@ -1,9 +1,16 @@
+import React, { createContext } from "react";
+import "./App.css";
+import Theme from "./context/Theme";
 
-import './App.css';
+export const Mycontext = React.createContext();
 
 function App() {
   return (
-   <h1>hello react context</h1>
+    <>
+    <Mycontext.Provider value={'ravi'}>
+      <Theme />
+      </Mycontext.Provider>
+    </>
   );
 }
 
