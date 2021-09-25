@@ -1,9 +1,12 @@
-import React  from "react";
-import  Appcontext  from './app-context';
+import React, { useState } from "react";
+import Appcontext from "./app-context";
 
 const Mycontext = (props) => {
+  const [auth, setAuth] = useState(true);
   return (
-    <Appcontext.Provider value={{ message: "Hello from the context" }}>
+    <Appcontext.Provider
+      value={(auth, setAuth, { message: "Hello from the context" })}
+    >
       {props.children}
     </Appcontext.Provider>
   );
