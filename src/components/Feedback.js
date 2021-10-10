@@ -8,7 +8,6 @@ const Feedback = () => {
         <div style={{backgroundColor: auth ? 'green' : 'red'}}> 
             <h1>Hello from Feedback</h1>
             {message}
-            
         </div>
     )
 }

@@ -4,9 +4,7 @@ import Appcontext from "./app-context";
 const Mycontext = (props) => {
   const [auth, setAuth] = useState(true);
   return (
-    <Appcontext.Provider
-      value={(auth, setAuth, { message: "Hello from the context" })}
-    >
+    <Appcontext.Provider value={(auth, setAuth, { message: "Hello from the context" })}>
       {props.children}
     </Appcontext.Provider>
   );
